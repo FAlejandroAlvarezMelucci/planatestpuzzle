@@ -3,6 +3,6 @@ namespace PuzzleTest.Interfaces
     public interface IUIEvents
     {
         void StartGame();
-        void MakeMove();
+        void MakeMove(int x, int y);
     }
 }
