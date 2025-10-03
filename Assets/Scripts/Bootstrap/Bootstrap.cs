@@ -21,6 +21,7 @@ namespace PuzzlePractice.Bootstrap
             // IGameSettings gameSettings = await webRequestService.FetchSettings();
 
             // Model startup
+            IGridModel gridModel = new GridModel(gameSettings);
             IGameLogic gameLogic = new GameLogic(gameSettings);
             IGameData gameData = (IGameData)gameLogic;
 
