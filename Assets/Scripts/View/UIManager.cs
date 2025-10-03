@@ -12,7 +12,6 @@ namespace PuzzleTest.View
         [SerializeField] private GameObject gameplayPanel;
         [SerializeField] private GameObject gameOverPanel;
         [SerializeField] private Button replayButton;
-        [SerializeField] private Button makeMoveButton;
         [SerializeField] private TextMeshProUGUI scoreText;
         [SerializeField] private TextMeshProUGUI movesText;
 
@@ -26,7 +25,6 @@ namespace PuzzleTest.View
             Assert.IsNotNull(gameplayPanel);
             Assert.IsNotNull(gameOverPanel);
             Assert.IsNotNull(replayButton);
-            Assert.IsNotNull(makeMoveButton);
             Assert.IsNotNull(scoreText);
             Assert.IsNotNull(movesText);
         }
@@ -40,7 +38,6 @@ namespace PuzzleTest.View
             _gameData.OnMovesChanged += UpdateMovesText;
 
             replayButton.onClick.AddListener(_uiEvents.StartGame);
-            makeMoveButton.onClick.AddListener(_uiEvents.MakeMove);
 
             UpdateScoreText(_gameData.Score);
             UpdateMovesText(_gameData.Moves);
@@ -57,7 +54,6 @@ namespace PuzzleTest.View
             }
 
             replayButton.onClick.RemoveAllListeners();
-            makeMoveButton.onClick.RemoveAllListeners();
         }
 
         private void UpdateScoreText(int newScore)
