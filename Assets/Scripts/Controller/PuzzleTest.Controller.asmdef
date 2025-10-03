@@ -1,0 +1,18 @@
+{
+    "name": "PuzzleTest.Controller",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c0f1138c3f33f9b47b46201dd9df3db3",
+        "GUID:8ddaa01fc0545f34e84bc83a836144fb",
+        "GUID:e94f55c8f63461144ac29c3580141a6e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
