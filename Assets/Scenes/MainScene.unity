@@ -1318,7 +1318,6 @@ MonoBehaviour:
   gameplayPanel: {fileID: 4631749322757945057}
   gameOverPanel: {fileID: 1425823357}
   replayButton: {fileID: 842248913}
-  makeMoveButton: {fileID: 0}
   scoreText: {fileID: 251434629}
   movesText: {fileID: 1008421379864340179}
 --- !u!1 &1425823357
@@ -1483,6 +1482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd934d6bb1f14208b2a9a895abbd1f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PuzzleTest.Bootstrap::PuzzlePractice.Bootstrap.Bootstrap
+  gameSettingsAsset: {fileID: 11400000, guid: 2609b6eefe567c14f848b3e178a206f2, type: 2}
   _uiManager: {fileID: 1235996148}
   _gameManager: {fileID: 2103055007}
 --- !u!1 &2103055005

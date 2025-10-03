@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8da2203890f466faf75ca21821d3a92, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: PuzzleTest.Model::PuzzleTest.Model.GameSettingsSO
+  _gridWidth: 6
+  _gridHeight: 5
+  _startingMoves: 5
+  _blockColors:
+  - {fileID: -9105749763464574675, guid: 93a917ffd6271eb45b272872602f283b, type: 3}
+  - {fileID: -8600411641421432971, guid: e7c65375bad9017418fcfacf8f1a6bb4, type: 3}
+  - {fileID: 7424901662290350790, guid: b8d2d07a7824173478dc58319ce2dda1, type: 3}
+  - {fileID: -190364731537695696, guid: d6ee973efe1d4524790225bc0900bd06, type: 3}
+  - {fileID: 1766323589166174454, guid: f560f237d4289924c9fa9df536e48cb6, type: 3}
+  _gravityDelaySeconds: 1

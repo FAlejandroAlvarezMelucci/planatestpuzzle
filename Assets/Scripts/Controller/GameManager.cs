@@ -2,6 +2,7 @@
 using PuzzleTest.View;
 using UnityEngine;
 
+// ReSharper disable once CheckNamespace
 namespace PuzzleTest.Controller
 {
     public class GameManager : MonoBehaviour, IUIEvents

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// ReSharper disable once CheckNamespace
 namespace PuzzleTest.View
 {
     public class UIManager : MonoBehaviour

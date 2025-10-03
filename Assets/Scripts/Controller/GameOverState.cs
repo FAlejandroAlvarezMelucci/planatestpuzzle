@@ -1,5 +1,6 @@
 ﻿using PuzzleTest.View;
 
+// ReSharper disable once CheckNamespace
 namespace PuzzleTest.Controller
 {
     public class GameOverState : IGameState
