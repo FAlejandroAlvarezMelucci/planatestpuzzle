@@ -22,14 +22,14 @@ namespace PuzzlePractice.Bootstrap
 
             // Model startup
             IGridModel gridModel = new GridModel(gameSettings);
-            IGameLogic gameLogic = new GameLogic(gameSettings);
+            IGameLogic gameLogic = new GameLogic(gameSettings, gridModel);
             IGameData gameData = (IGameData)gameLogic;
 
             // View startup
             _uiManager.Initialize(gameData, _gameManager);
 
             // Controllers startup
-            _gameManager.Initialize(_uiManager, gameLogic);
+            _gameManager.Initialize(_uiManager, gameLogic, gameSettings);
             _gameManager.StartGame();
         }
     }
