@@ -1317,6 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   gameplayPanel: {fileID: 4631749322757945057}
   gameOverPanel: {fileID: 1425823357}
+  replayButton: {fileID: 842248913}
   makeMoveButton: {fileID: 7018639915147944317}
   scoreText: {fileID: 251434629}
   movesText: {fileID: 1008421379864340179}
@@ -1447,6 +1448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1932348371}
+  - component: {fileID: 1932348372}
   m_Layer: 0
   m_Name: BootStrap
   m_TagString: Untagged
@@ -1469,6 +1471,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 155858556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1932348372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932348370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd934d6bb1f14208b2a9a895abbd1f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PuzzleTest.Bootstrap::PuzzlePractice.Bootstrap.Bootstrap
+  _uiManager: {fileID: 1235996148}
+  _gameManager: {fileID: 2103055007}
 --- !u!1 &2103055005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2103055006}
+  - component: {fileID: 2103055007}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1500,6 +1517,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 155858556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2103055007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103055005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4299795229374c34af9f27222fa1f42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PuzzleTest.Controller::PuzzleTest.Controller.GameManager
 --- !u!224 &187402177161075800
 RectTransform:
   m_ObjectHideFlags: 0
