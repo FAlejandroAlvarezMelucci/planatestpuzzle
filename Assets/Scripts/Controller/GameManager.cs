@@ -7,6 +7,8 @@ namespace PuzzleTest.Controller
 {
     public class GameManager : MonoBehaviour, IUIEvents
     {
+        private float _gravityDelaySeconds;
+        
         private UIManager _uiManager;
         private IGameLogic _gameLogic;
 
@@ -16,15 +18,17 @@ namespace PuzzleTest.Controller
         private IGameState _playingState;
         private IGameState _gameOverState;
 
-        public void Initialize(UIManager uiManager, IGameLogic gameLogic)
+        public void Initialize(UIManager uiManager, IGameLogic gameLogic, IGameSettings gameSettings)
         {
             _uiManager = uiManager;
             _gameLogic = gameLogic;
+            _gravityDelaySeconds = gameSettings.GravityDelaySeconds;
 
             _playingState = new PlayingState(gameManager: this, _gameLogic);
             _gameOverState = new GameOverState(_uiManager);
 
             _gameLogic.OnNoMoreMoves += EndGame;
+            _gameLogic.OnMoveCompleted += StartGravitySequence;
         }
 
         private void OnDestroy()
@@ -32,8 +36,19 @@ namespace PuzzleTest.Controller
             if (_gameLogic == null) return;
 
             _gameLogic.OnNoMoreMoves -= EndGame;
+            _gameLogic.OnMoveCompleted -= StartGravitySequence;
         }
 
+        private void StartGravitySequence()
+        {
+            Invoke(nameof(GravitySequence), _gravityDelaySeconds);
+        }
+        
+        private void GravitySequence()
+        {
+            _gameLogic.ApplyGravityAndRefill();
+        }
+        
         public void StartGame()
         {
             TransitionToState(_playingState);

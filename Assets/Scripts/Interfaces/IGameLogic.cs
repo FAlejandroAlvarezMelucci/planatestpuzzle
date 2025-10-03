@@ -10,6 +10,6 @@ namespace PuzzleTest.Interfaces
         
         void ResetGame();
         void MakeMove(int posX, int posY);
-
+        void ApplyGravityAndRefill();
     }
 }

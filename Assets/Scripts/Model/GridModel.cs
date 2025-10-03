@@ -50,9 +50,7 @@ namespace PuzzleTest.Model
 
         public int GetBlockColor(int posX, int posY)
         {
-            if (!IsValidPosition(posX, posY)) return BlockConstants.EMPTY_BLOCK;
-
-            return 0;
+            return !IsValidPosition(posX, posY) ? BlockConstants.EMPTY_BLOCK : _grid[posX, posY];
         }
 
         public bool IsValidPosition(int posX, int posY)
